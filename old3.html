@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="./index.js"></script>
+    <script type="text/javascript" src="data.json"></script>
+    
+</head>
+<body>
+  <div class="w-full h-screen bg-repeat bg-local bg-center relative"
+  style="background-color: pink; background-image: url(https://wallpaperping.com/wp-content/uploads/2018/07/grunge-heart-background-1517633355tq9.jpg);">
+
+    <!-- <h1>sdf</h1> -->
+<script>
+ 
+
+fetch('./data.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+ console.log(data);
+   var mydata = JSON.parse(data);
+   console.log(mydata)
+
+   function getFullName(item) {
+  return [item.id,item.suit].join(" ");
+}
+   document.getElementById("demo").innerHTML = mydata.map(getFullName);
+
+
+   
+</script>
+    <!-- Navbar starts-->
+    <div class="navbar pt-6">
+      <nav class="text-2xl font-semibold">
+          <div class="flex list-none gap-x-4 text-center justify-center pt-6">
+              <li class="bg-red-700 hover:bg-red-800 hover:text-white py-2 px-4 rounded-lg active"><a href="../index.html">Home</a></li>
+              <li class="bg-red-500 hover:bg-red-800 hover:text-white py-2 px-4 rounded-lg active"><a href="/components/cards.html">Cards</a></li>
+              <li class="bg-red-700 hover:bg-red-800 hover:text-white py-2 px-4 rounded-lg"><a href="/components/puzzle.html">Puzzle</a></li>
+              <li class="bg-red-700 hover:bg-red-800 hover:text-white py-2 px-4 rounded-lg"><a href="/bdayriya/index.html">2021</a></li>
+                  <br>
+          </div>
+          <div class="play-button list-none gap-x-4 text-center justify-center pt-6">
+              <li 
+              class=""> 
+              <button class="bg-gray-800 text-white py-2 text-center justify-center px-4 rounded-lg mt-6" onclick="play()">Play</button></li>
+          </div>
+      </nav>
+  </div>
+  <!-- Navbar end-->
+</div>
+<script>
+
+    function play() {
+        var audio = new Audio('/assets/bday.mp3');
+        audio.play();
+    }
+  </script>
+  <div style="visibility: hidden;">
+    <embed src="/assets/bday.mp3" autostart="true" loop="true">
+    </div>
+    <!-- Card1 -->
+    <div class="flex justify-center absolute top-64 left-24 z-10">
+        <div class="rounded-lg shadow-lg bg-white max-w-sm">
+          <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+            <img class="rounded-t-lg" src="assets/3.jpeg" alt=""/>
+          </a>
+          <div class="p-6">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">ख्वाहिश</h5>
+            <p class="text-gray-700 text-base mb-4" id="p1">
+                ख्वाहिशों के पथ पर, हालातों <br>
+                का साथ निभाने का सफर अभी बाकी हैं, <br>
+                एकांत जीवन के शांत हृदय मे<br>
+                              <!-- The three dots -->
+                              <span id="dots1">...</span>
+                              <!-- This content only be shown as needed -->
+                              <span id="more1" class="hidden">प्रेम की गंगा <br>बहाना अभी बाकी है ।<br> <br>
+
+                                ख्वाहिशों के पुराने संदूक में <br>
+                                अरमानों की चाभी लगाए<br>
+                                इश्क़ को दबाये रखे हैं,<br>
+                                जज़्बातों में लिपटे हुए हालातों के <br>
+                                बोझ के नीचे छिपाये रखे हैं। <br> <br>
+                                
+                                इश्क़ की रिमझिम बारिश मे <br>
+                                मोक्ष की लालसा अभी बाकी हैं। <br>
+                                मौत के बाद भी जीवन साथ <br>
+                                बिताने की प्रेरणा अभी बाकी हैं। <br> <br>
+                                
+                                हालातों का पर्दा, ख्वाहिशों के पुराने <br>
+                                संदूक से हटाना अभी बाकी हैं, <br>
+                                एकांत जीवन के शांत हृदय में <br>
+                                प्रेम की गंगा बहाना अभी बाकी हैं। <br>
+                                  <span>
+            </p>
+            <button onclick="toggleText(1)" id="button1" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read
+              more</button>
+          </div>
+        </div>
+     
+         
+      </div>
+      
+      <div class="inline-flex pl-10 gap-x-96 mb-11">
+        <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+         <a href="old2.html">Prev</a> 
+        </button>
+        <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+         <a href="old4.html">Next</a> 
+        </button>
+      </div>
+      <!-- <div class="ml-11 z-11">
+        <button class="bg-red-700 hover:bg-red-900 text-2xl text-white font-semibold py-2 px-4 justify-center items-center rounded-lg mt-5">Prev</button>
+      </div>  -->
+
+        <!-- Javascript code -->
+        <script>
+          function toggleText(data) {
+            console.log("Call")
+            if(data === 1){
+              var dots = document.getElementById("dots1");
+              var moreText = document.getElementById("more1");
+              var button = document.getElementById("button1");
+              // console.log("1")
+            }
+            if(data === "a"){
+              var dots = document.getElementById("dots2");
+              var moreText = document.getElementById("more2");
+              var button = document.getElementById("button2");
+               console.log("2")
+            }
+            if(data === 3){
+              var dots = document.getElementById("dots3");
+              var moreText = document.getElementById("more3");
+              var button = document.getElementById("button3");
+            }
+            if(data === 4){
+              var dots = document.getElementById("dots4");
+              var moreText = document.getElementById("more4");
+              var button = document.getElementById("button4");
+            }
+            if(data === 5){
+              var dots = document.getElementById("dots5");
+              var moreText = document.getElementById("more5");
+              var button = document.getElementById("button5");
+            }
+            if(data === 6){
+              var dots = document.getElementById("dots6");
+              var moreText = document.getElementById("more6");
+              var button = document.getElementById("button6");
+            }
+        
+              if (dots.classList.contains("hidden")) {
+                  // Show the dots
+                  dots.classList.remove("hidden");
+                  // Hide the more text
+                  moreText.classList.add("hidden");
+                  // change text of the button
+                  button.innerHTML = "Read more";
+              } else {
+                  // Hide the dots
+                  dots.classList.add("hidden");
+                  // hide the more text
+                  moreText.classList.remove("hidden");
+                  // change text of the button
+                  button.innerHTML = "Read less";
+              }
+          }
+          
+      </script>
+
+      <!-- <div class="p-20">
+        <div class="p-5 bg-amber-200">
+            <h1 class="mb-3 text-4xl font-light">Welcome to KindaCode.com</h1> -->
+            <!-- This text always show up -->
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+                lorem egestas vitae scel -->
+                <!-- The three dots -->
+                <!-- <span id="dotsl">...</span> -->
+                <!-- This content only be shown as needed -->
+                <!-- <span id="morel" class="hidden">erisque enim ligula
+                    venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus
+                    vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In libero
+                    sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
+                    fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
+                    <span>
+            </p> -->
+    
+            <!-- Implement the read more/read less button -->
+            <!-- <button onclick="toggleText(l)" id="buttonl"
+                class="mt-3 px-5 py-2 bg-rose-500 text-white duration-300 hover:bg-rose-700">Read
+                more</button>
+        </div> -->
+    
+
+    </div>
+
+</body>
+</html>
